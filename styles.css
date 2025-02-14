@@ -1,0 +1,11 @@
+@media (max-width: 600px) {
+    /* Styles for mobile devices */
+    body {
+        background-size: cover;
+        /* Adjust other styles as needed */
+    }
+    form {
+        width: 100%;
+        /* Adjust other styles as needed */
+    }
+}
