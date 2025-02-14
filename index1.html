@@ -51,7 +51,7 @@
         }
         #inpButton {
             position: absolute;
-            top: 40%;
+            top: 42%;
             left: 60%;
             transform: translate(-50%, -50%);
             padding: 10px 10px;
@@ -69,7 +69,7 @@
          }
          #input2 {
            position: absolute;
-           top: 35%;
+           top: 36%;
            left: 60%;
            transform: translate(-50%, -50%);
            padding: 10px 10px;
@@ -120,14 +120,19 @@ def fun(event):
         <input type="text" id="input2" placeholder="Enter second input">
         <button id="inpButton">Submit</button>"""))
     @when("click", "#inpButton")
-    def on_canvas_click(): 
+    def on_canvas_click():
+            context.clearRect(0, 0, canvas.width, canvas.height)
+            context.stroke()
             input1 = document.getElementById('input1').value
             input2 = document.getElementById('input2').value
-            context.font = "20px Arial"
+            #context.clearRect(0, 0, canvas.width, canvas.height)
+            context.font = "15px Arial"
             context.fillStyle = "WHITE"
-            context.fillText("Answer  " +str(int(input1)+int(input2)),900,400)
-
-    on_canvas_click() 
+            context.fillText("first number  "+input1, 862, 380)
+            #context.clearRect(0, 0, canvas.width, canvas.height)
+            context.fillText("Second number  "+input2, 862, 400)
+            #context.clearRect(0, 0, canvas.width, canvas.height)
+            context.fillText("Answer  " +str(int(input1)+int(input2)),862,430)
     canvas.addEventListener("click", on_canvas_click)
 
     
